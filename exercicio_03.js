@@ -6,10 +6,15 @@ class NerdIF {
   }
 
   retornarAtributos() {
-    return this.atributos()
+    try{
+      return this.atributos();
+    } catch (erro){
+      console.log(erro.message)
+    }
   }
 
   atributos() {
+    if (this.estudante != "" && this.cosplay != "" &&  this.nota_cosplay != "")
     return {
       estudante: this.estudante,
       cosplay: this.cosplay,
@@ -18,7 +23,7 @@ class NerdIF {
   }
 }
 
-const aluno = new NerdIF("João", "Homem-Aranha", 9.5);
+const aluno = new NerdIF("", "");
 const atributos = aluno.retornarAtributos();
 
 console.log(atributos.estudante); 

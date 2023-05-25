@@ -34,4 +34,3 @@ const atributos = meuAnimal.mostrarAtributos();
 
 // Imprimindo os atributos
 // 
-
