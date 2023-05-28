@@ -9,7 +9,7 @@ class Estudante {
     this.turma = turma;
   }
 
-  mostrarAtributos() {
+  mostrarAtributos(){
     try{
       return this.atributos();
     } catch (erro){
@@ -23,15 +23,11 @@ class Estudante {
       nome: this.nome,
       idade: this.idade,
       turma: this.turma
-    };
+    }; else{
+      throw new Error ("Está faltando alguma informação...")
+    }
   }
 }
 
 const estudante = new Estudante("", "");
-
 const atributos = estudante.mostrarAtributos();
-
-console.log(atributos.nome);   
-console.log(atributos.idade);  
-console.log(atributos.turma); 
-
